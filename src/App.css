@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.сompleted {
+  color : gray;
+  text-decoration: line-through;
+}
+
+.addPadding{
+  margin: 5px;
+}
+
+.completedFilter{
+  display: none;
+}
