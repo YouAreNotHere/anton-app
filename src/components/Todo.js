@@ -21,8 +21,8 @@ const Todo = ({todo}) => {
                     }}
                 />
                 <button onClick={()=>{
-                    dispatch(editTodo(todo.id, newTodoText));
-                    dispatch(changeEditedTodoId(todo.id));
+                    dispatch(editTodo(newTodoText, todo.id, ));
+                    dispatch(changeEditedTodoId(null));
                     setNewTodoText("");
                 }}>
                     Save
@@ -40,7 +40,7 @@ const Todo = ({todo}) => {
                     Edit
                 </button>
                 <button onClick={() => dispatch(completeTodo(todo.id))} className="addPadding">
-                    Complete
+                    {todo.complete ? "Uncomplete" : "Complete"}
                 </button>
             </li>
         )

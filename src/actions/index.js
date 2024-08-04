@@ -6,47 +6,35 @@ export const VisibilityFilters = {
 
 let nextId = 0;
 //Возможно, понадобится заменить на Ref
-export const addTodo = (text) =>{
-    return {
+export const addTodo = (text) => ({
         type: "ADD_TODO",
         id: nextId++,
         text: text,
-    }
-};
+});
 
-export const editTodo = (text, id) =>{
-    return {
+export const editTodo = (text, id) => ({
         type: "EDIT_TODO",
         id: id,
         text: text,
-    }
-};
+});
 
-export const deleteTodo = (id) =>{
-    return {
+export const deleteTodo = (id) => ({
         type: "DELETE_TODO",
         id: id,
-    }
-};
+});
 
-export const completeTodo = (id) =>{
-    return{
+export const completeTodo = (id) => ({
         type: "COMPLETE_TODO",
         id: id,
-    }
-}
+});
 
-export const changeCurrentFilter= (filter) =>{
-    return {
+export const changeCurrentFilter= (filter) =>({
         type: "CHANGE_FILTER",
         filter: filter,
-    }
-}
+});
 
-export const changeEditedTodoId= (editedTodoId) =>{
-    return {
+export const changeEditedTodoId= (editedTodoId) => ({
         type: "CHANGE_EDITED_TODO_ID",
-        editedTodoId,
-    }
-}
+        editedTodoId: editedTodoId,
+});
 
